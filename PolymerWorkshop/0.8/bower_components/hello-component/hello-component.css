@@ -1,0 +1,8 @@
+:host {
+  display: block;
+}
+/* styling elements distributed to content (via ::content) requires */
+/* using a wrapper element for compatibility with shady DOM */
+.content-wrapper > ::content h2 {
+  color: blue;
+}

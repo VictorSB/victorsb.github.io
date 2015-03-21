@@ -1,0 +1,148 @@
+.transparent-title{ 	
+ 	display: block;
+    position: fixed;
+    background-color: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100px;
+    top: 250px;
+    border-radius: 50px;
+    vertical-align: center;
+}
+
+.dashed_border{
+	border: 2px dashed #FFC507 !important;
+	background-color: black;
+}
+
+.solid_border{
+	border: 2px solid #FFC507 !important;
+}
+
+.clickable{
+	cursor: pointer;
+}
+
+/* FLEX PROPERTY SAMPLES */
+#samples1, #samples4{
+	height: 200px;	
+	width: 100%;
+	display: -webkit-flex;
+	-webkit-justify-content: center;
+	-webkit-align-items: center;
+	background-color: rgba(0,0,0,0.7);
+}
+
+#samples2{
+	height: 200px;	
+	width: 100%;
+	display: -webkit-flex;
+	-webkit-justify-content: space-around;
+	-webkit-align-items: stretch;
+	background-color: rgba(0,0,0,0.7);	
+}
+
+#samples3{
+	height: 200px;
+	width: 100%;
+	display: -webkit-flex;
+	-webkit-justify-content: space-around;
+	-webkit-align-items: stretch;
+	-webkit-flex-direction: column;
+	background-color: rgba(0,0,0,0.7);	
+}
+
+#samples3 > :nth-child(2){
+	flex: 2 0 0px;
+}
+
+#samples1 div, #samples2 div{
+	margin: 15px;
+	padding: 15px;
+}
+
+/* CALC PROPERTY SAMPLES */
+#samples4 div
+{
+	display: -webkit-flex;
+	-webkit-align-items: center;
+	-webkit-justify-content: center;
+    height: -webkit-calc(100% - 40px);
+    width: -webkit-calc(100% - 40px);
+}
+
+/* CSS3D SAMPLES */
+	#samples5{
+	-webkit-transform-style: preserve-3d;
+	-webkit-perspective: 300px;
+	height: 300px;
+	width: 584px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.sample_right{
+	-webkit-transform: rotateY(30deg) translate3d(0,0,41px);
+	box-shadow: -4px 5px #666666;
+}
+
+.sample_center{
+	-webkit-transform: translate3d(0,0,1px);
+	box-shadow: 0px 5px #666666;	
+}
+
+.sample_left{
+	-webkit-transform: rotateY(-30deg) translate3d(0,0,41px);
+	box-shadow: 4px 5px #666666;
+}
+
+.tile{
+	z-index: 1000;
+	width: 120px;
+	height: 90px;
+	margin: 10px !important;
+	border: 3px solid black !important;
+	line-height: 90px;
+	text-align: center;
+	float:left;
+	color: white;
+	-webkit-transition: all 1000ms cubic-bezier(0.215, 0.61, 0.355, 1);
+	background-color: red;
+}
+
+.tile:hover{
+	-webkit-transform: translate3d(0,0,50px);
+	-webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1)
+}
+
+/* CSS3 TRANSITIONS SAMPLES */
+#samples6{
+	width: 500px;
+	margin-right: auto;
+	margin-left: auto;
+}
+	
+#samples6 div{
+	width: 91px;
+	height: 91px;
+	float:left;
+	-webkit-transition:all 200ms ease-in; 	
+}
+
+#samples6 div:hover{
+	background-color: #FFC507;
+	-webkit-transform: rotate(-180deg);
+}
+
+#samples6 > :nth-child(even){
+	background-color: white;
+}
+
+#samples6 > :nth-child(odd){
+	background-color: black;
+}
+
+/* CANVAS */
+canvas{
+	margin-right: 10px;
+	background-color: white;
+}
