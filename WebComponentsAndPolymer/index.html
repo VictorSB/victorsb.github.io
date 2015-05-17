@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>HTML5</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/league.css" id="theme">
+		<link rel="stylesheet" href="css/main.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section data-background='images/night.jpg'>
+					<h1>WebComponents & Polymer</h1>
+					<img width="150" src='images/polymer.png' />
+					<p>
+						<small>By <a href="http://twitter.com/globitss">@Globitss</a> and <a href="http://twitter.com/VictorSanchez">@VictorSanchez</a></small>
+					</p>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<h3>About us</h3>
+					<img width="200" alt='my beautiful face' src='images/avatar_gloria.jpg'>
+					<p>
+						Web development addict, minion at MashMeTV, self-taught person, sport lover and herbologist, bad at writing descriptions of my self.
+					</p>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<h3>About us</h3>
+					<img width="200" alt='my beautiful face' src='images/avatar.png'>
+					<p>
+						electrical engineer, entrepreneur, proud CEO of www.mashme.tv <strong>Google Developer Expert in HTML5</strong>,web addict,eventual speaker, <strong>undeniably geek</strong>...
+					</p>
+				</section>			
+
+				<section data-background='images/hawkeye.jpeg'>
+					<div class='transparent-title'>
+						<p>Say hi to HTML5...</p>
+					</div>
+				</section>
+
+				<section data-background='images/avengers.jpeg'>
+					<div class='transparent-title'>
+						<p>It's all about the team!</p>
+					</div>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<h2>HTML5</h2>
+					<p>...is more...</p>
+					<p>
+						<img src='images/semantic.jpg' />
+						<img src='images/css3.jpg' />
+						<img src='images/multimedia.jpg' />
+						<img src='images/graphics.jpg' />
+					</p>
+					<p>
+						<img src='images/device.jpg' />
+						<img src='images/performance.jpg' />
+						<img src='images/offline_and_storage.jpg' />
+						<img src='images/connectivity.jpg' />
+					</p>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<a href='http://www.webcomponents.org'><img width="500" class="no_border" src='images/webcomponents.png' /></a>
+					<a href='http://www.webcomponents.org'>http://www.webcomponents.org</a>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<h3>HTML Templates</h3>
+					<img class="no_border" src='images/icon-templates.png' />
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<img class="no_border" src='images/icon-templates.png' />
+					<h3>HTML Templates</h3>
+					<ul>
+						<li>Finally templates done right</li>
+						<li>Inhert HTML it needs to be "activated"</li>
+						<li>They do not support any logic on its own.</li>
+						<li>VERY easy to use</li>
+					</ul>
+				</section>
+
+				<section><section data-background='images/night.jpg'>
+					<img class="no_border" src='images/icon-templates.png' />
+					<h3>HTML Templates</h3>
+<pre><code data-trim contenteditable>
+<template id="my-template">
+	<h2>Template title</h2>
+	<p>My text goes here foo bar</p>
+</template>
+</code></pre>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<img class="no_border" src='images/icon-templates.png' />
+					<h3>HTML Templates</h3>
+<pre><code data-trim contenteditable>
+//Using templates
+var myTemplate = document.getElementById('my-template');
+document.appendChild(template.content.cloneNode());
+</code></pre>
+				</section></section>
+
+				<section data-background='images/night.jpg'>
+					<h3>Shadow DOM</h3>
+					<img class="no_border" src='images/icon-shadowdom.png' />
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<img class="no_border" src='images/icon-shadowdom.png' />
+					<h3>Shadow DOM</h3>
+					<ul>
+						<li>OMG this DOM is out of reach...</li>
+						<li>Has the ability to isolate code, its visibility and its effects</li>
+						<li>Moderately complex but extremely useful</li>
+						<li>Many isolated elements won't break each other</li>
+					</ul>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<img class="no_border" src='images/icon-shadowdom.png' />
+					<h3>Shadow DOM</h3>
+<pre><code data-trim contenteditable>
+var shadow = node.createShadowRoot();
+shadow.appendChild(myNode);
+</code></pre>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<h3>Custom elements</h3>
+					<img class="no_border" src='images/icon-customelements.png' />
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<img class="no_border" src='images/icon-customelements.png' />
+					<h3>Custom elements</h3>
+					<ul>
+						<li>We are going to create a new HTML tag.</li>
+						<li>We will create a custom element prototype extending HTMLElement.prototype</li>
+						<li>It defines lifecycle callbacks.</li>
+						<li>Could have methods, getters, setters its own style...</li>
+					</ul>
+				</section>
+
+				<section><section data-background='images/night.jpg'>
+					<img class="no_border" src='images/icon-customelements.png' />
+					<h3>Custom elements</h3>
+<pre><code data-trim contenteditable>
+//Create and prepare the prototype
+var helloPrototype = Object.create(HTMLElement.prototype);
+helloPrototype.createdCallback = function() { 
+	this.innerHTML = "<h1>HelloWorld</h1>";
+};
+
+helloPrototype.hello = function(){
+	console.log("hello");	
+};
+</code></pre>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<img class="no_border" src='images/icon-customelements.png' />
+					<h3>Custom elements</h3>
+<pre><code data-trim contenteditable>
+//Register the custom element
+document.registerElement('hello-element', {
+	prototype: helloPrototype,
+});
+</code></pre>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<img class="no_border" src='images/icon-customelements.png' />
+					<h3>Custom elements</h3>
+<pre><code data-trim contenteditable>
+//Creating an instance of our element
+var helloInstance = document.createElement('hello-element');
+
+//Appending the element
+document.body.appendChild(helloInstance);
+
+//Using the element
+helloInstance.hello();
+</code></pre>
+				</section></section>
+
+				<section data-background='images/night.jpg'>
+					<h3>HTML Imports</h3>
+					<img class="no_border" src='images/icon-htmlimports.png' />
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<img class="no_border" src='images/icon-htmlimports.png' />
+					<h3>HTML Imports</h3>
+					<ul>
+						<li>Import HTML files</li>
+						<li>HTML files will load their JS</li>
+						<li>HTML files will load their CSS</li>
+						<li>Controversial - ECS6 modules?</li>
+					</ul>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<img class="no_border" src='images/icon-htmlimports.png' />
+					<h3>HTML Imports</h3>
+<pre><code data-trim contenteditable>
+<link rel="import" href="../components/my-component.html">
+</code></pre>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<h3>WebComponents Technologies Support</h3>
+					<img class="no_border" src='images/webcomponentssupport.png' />
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<p>Help me <a href="http://webcomponents.org/polyfills/">polyfills</a> you are my last hope...</p>
+					<ol>
+						<li>
+							webcomponents.js
+							<ul>
+								<li>HTML imports</li>
+								<li>Custom Elements</li>
+								<li>Shadow DOM</li>
+							</ul>
+						</li>
+						<li>
+							webcomponents-lite.js
+							<ul>
+								<li>HTML imports</li>
+								<li>Custom Elements</li>
+							</ul>
+						</li>
+					</ol>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<h3>Why should you care?</h3>
+					<ul>
+						<li>WebComponents are great for maintainability</li>
+						<li>1 component 1 repository</li>
+						<li>Easy to reuse</li>
+					</ul>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<p>Polymer</p>
+					<iframe style="background-color: white" width="100%" height="400" src='https://www.polymer-project.org/0.9/'></iframe>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<p>Bower</p>
+					<iframe style="background-color: white" width="100%" height="400" src='http://www.bower.io'></iframe>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<img class="no_border" src='images/icon-htmlimports.png' />
+					<h3>Installation...</h3>
+<pre><code data-trim contenteditable>
+//To easily install bower you need node + npm
+//Visit: http://nodejs.org
+
+npm install -g bower //Install bower globally
+mkdir MyPolymerProject
+cd MyPolymerProject
+
+bower init //Follow the instructions
+bower install --save Polymer/polymer //(0.5) 
+//or 
+bower install --save Polymer/polymer#0.9.0
+//Go visit www.github.com/PolymerElements
+</code></pre>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<img class="no_border" src='images/icon-htmlimports.png' />
+					<h3>Header</h3>
+<pre><code data-trim contenteditable>
+<script src="bower_components/webcomponentsjs/webcomponents.js">
+</script>
+
+<link rel="import" href="bower_components/font-roboto/roboto.html">
+<link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+<link rel="stylesheet" href="css/main.css">
+</code></pre>
+					<h3>core-toolbar</h3>
+<pre><code data-trim contenteditable>
+<core-toolbar>
+</core-toolbar>
+</code></pre>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<p class="small">Step 1</p>
+					<iframe style="background-color: white" width="380" height="600" src='../PolymerWorkshop/0.5.5/step1.html'>
+					</iframe>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<img class="no_border" src='images/icon-htmlimports.png' />
+					<h3>paper-icon</h3>
+<pre><code data-trim contenteditable>
+<core-toolbar>
+
+  	<paper-icon-button icon="menu">
+  	</paper-icon-button>
+
+	<div flex>My Application</div>
+
+</core-toolbar>
+</code></pre>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<p class="small">Step 2</p>
+					<iframe style="background-color: white" width="380" height="600" src='../PolymerWorkshop/0.5.5/step2.html'>
+					</iframe>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<img class="no_border" src='images/icon-htmlimports.png' />
+					<h3>paper-dropdown, core-menu, paper-item</h3>
+<pre><code data-trim contenteditable>
+<paper-menu-button>
+	<paper-icon-button icon="more-vert">
+	</paper-icon-button>
+	
+	<paper-dropdown class="dropdown" halign="right">
+		<core-menu class="menu">
+			<paper-item>Item 1</paper-item>
+			<paper-item>Item 2</paper-item>
+			<paper-item>Item 3</paper-item>
+		</core-menu>
+	</paper-dropdown>
+</paper-menu-button>
+</code></pre>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<p class="small">Step 3</p>
+					<iframe style="background-color: white" width="380" height="600" src='../PolymerWorkshop/0.5.5/step3.html'>
+					</iframe>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<img class="no_border" src='images/icon-htmlimports.png' />
+					<h3>core-header-panel</h3>
+<pre><code data-trim contenteditable>
+<core-header-panel flex mode="waterfall">
+
+	<core-toolbar>...</core-toolbar>
+	<div class="content">...</div>
+
+</core-header-panel>
+</code></pre>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<p class="small">Step 4</p>
+					<iframe style="background-color: white" width="380" height="600" src='../PolymerWorkshop/0.5.5/step4.html'>
+					</iframe>
+				</section>
+
+				<section><section data-background='images/night.jpg'>
+					<img class="no_border" src='images/icon-htmlimports.png' />
+					<h3>core-drawer-panel, core-header-panel</h3>
+<pre><code data-trim contenteditable><core-drawer-panel  id="drawerPanel">
+
+    <core-header-panel flex drawer>
+      <core-menu>...</core-menu>
+    </core-header-panel>
+
+    <core-header-panel flex main>
+      <core-toolbar>...</core-toolbar>
+      <div class="content">...</div>
+    </core-header-panel>
+
+</core-drawer-panel>
+</code></pre>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<img class="no_border" src='images/icon-htmlimports.png' />
+					<h3>CSS</h3>
+<pre><code data-trim contenteditable>core-drawer-panel:not([narrow]) #navicon{
+	display: none;
+}
+</code></pre>
+					<h3>JS</h3>
+<pre><code data-trim contenteditable>var navicon = document.getElementById('navicon');
+var drawerPanel = document.getElementById('drawerPanel');
+
+navicon.addEventListener('click', function(){
+  drawerPanel.togglePanel();
+})
+</code></pre>
+				</section></section>
+
+				<section data-background='images/night.jpg'>
+					<p class="small">Step 5</p>
+					<iframe style="background-color: white" width="380" height="600" src='../PolymerWorkshop/0.5.5/step5.html'>
+					</iframe>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<p class="small">Step 5 - Wide</p>
+					<iframe style="background-color: white" width="700" height="600" src='../PolymerWorkshop/0.5.5/step5.html'>
+					</iframe>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<h1>There is even more</h1>
+					<img src='images/onemore.png'>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<h3>core-elements</h3>
+					<iframe style="background-color: white" width="100%" height="600" src='https://www.polymer-project.org/0.5/components/core-elements/demo.html'></iframe>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<h3>paper-elements</h3>
+					<iframe style="background-color: white" width="100%" height="600" src='https://www.polymer-project.org/0.5/components/paper-elements/demo.html'></iframe>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<h3>customelements.io/</h3>
+					<iframe style="background-color: white" width="100%" height="600" src='http://customelements.io/'></iframe>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<p>Polymer 0.5.5 is a cool experiment</p>
+					<h3>Polymer 0.9 is about to be production ready</h3>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<img width="150" src='images/polymer.png' />
+					<h3>What's the difference?</h3>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<img width="150" src='images/polymer.png' />
+					<h3>There is now 3 layers...</h3>
+					<ul>
+						<li>polymer-micro: just a little sugar, very reusable</li>
+						<li>polymer-mini: +DOM control, template stamping</li>
+						<li>polymer: +data binding, closest to 0.5</li>
+					</ul>
+					<h3>No docs yet, take a look at <a href='https://www.polymer-project.org/0.9/'>Polymer 0.9 Beta</a></h3>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<p>Yeoman</p>
+					<iframe style="background-color: white" width="100%" height="400" src='http://yeoman.io/'></iframe>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<h3>Using <a href='https://github.com/MashMeTV/generator-mmtv-polymer'>generator-mmtv-polymer</a></h3>
+<pre><code data-trim contenteditable>
+sudo npm install -g yo bower grunt-cli
+git clone https://github.com/MashMeTV/generator-mmtv-polymer.git
+cd generator-mmtv-polymer
+npm install
+sudo npm link
+yo mmtv-polymer:component
+</code></pre>
+					<p>Thank <a href='https://twitter.com/globitss'>@globitss</a> for this generator</p>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<h3>Component Structure</a></h3>
+<pre><code data-trim contenteditable>
+|___ hello-component
+ \______ bower.json
+ \______ hello-component.html
+ \______ hello-component.js
+ \______ hello-component.css
+ \______ demo.html
+</code></pre>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<h3>HTML</a></h3>
+<pre><code data-trim contenteditable>
+<link rel="import" href="../polymer/polymer.html">
+
+<dom-module id="hello-component">
+  
+  <link rel="import" type="css" href="hello-component.css">
+
+  <template>
+
+    <h1>Hello from hello-component by <span>{{author}}</span></h1>
+    <div class="content-wrapper">
+      <content></content>
+    </div>
+
+  </template>
+
+</dom-module>
+
+<script src="hello-component.js"></script>
+</code></pre>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<h3>JS</a></h3>
+<pre><code data-trim contenteditable>
+HelloComponent = Polymer({
+
+    is: 'hello-component',
+
+    properties: {
+
+      name: {
+        type: String,
+        value: 'Obi-Wan Kenobi',
+        reflectToAttribute: true
+      },
+
+      fancy: {
+        type: Boolean,
+        type: false
+      }
+
+    },
+
+    behaviors: [SampleBehavior],
+    
+    created: function() {
+      console.log('1. LIFECYCLE created: A new jedi has been created');
+    },
+
+    ready: function() {
+      console.log('2. LIFECYCLE ready: Jedi now has local dom ready and default values');
+    },
+
+    factoryImpl: function(name){
+      this.name = name
+      console.log('*. LIFECYCLE factoryImpl: Custom Jedi :P');
+      console.log("I am only invoked when you use me like: new HelloComponent('"+this.name+"')");
+      this.sayHello();
+    },
+
+    attached: function(author){
+      console.log('3. LIFECYCLE attached: Anakin is now in Tatooine');
+    },
+
+    detached: function(author){
+      console.log('4. LIFECYCLE dettached: Anakin is dead deal with it...');
+    },
+    
+    sayHello: function(greeting) {
+      var response = greeting || 'Hello far far away Galaxy, I am';
+      console.log(response + " " + this.name);
+    },
+
+    fireLasers: function() {
+      this.fire('hello-component-lasers-success', { sound: 'Pew pew pew!' });
+    }
+
+  });
+</code></pre>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<p>Mallorcare.eu -- Good example</p>
+					<iframe style="background-color: white" width="100%" height="400" src='http://www.mallorcare.eu'></iframe>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<h3>Questions?</h3>
+					<img width="200" alt='my beautiful face' src='images/avatar_gloria.jpg'>
+					<img width="200" alt='my beautiful face' src='images/avatar.png'>
+					<p>
+						Happy to answer now here or later at gloria@mashme.tv or victor@mashme.tv
+					</p>
+				</section>
+
+				<section data-background='images/night.jpg'>
+					<h1>THANK YOU</h1>
+					<p>
+						<small>By <a href="http://twitter.com/globitss">@globitss</a> and <a href="http://twitter.com/VictorSanchez">@VictorSanchez</a></small>
+					</p>
+				</section>		
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

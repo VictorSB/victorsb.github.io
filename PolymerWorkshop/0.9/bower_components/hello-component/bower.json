@@ -1,0 +1,28 @@
+{
+  "name": "hello-component",
+  "private": true,
+  "version": "0.0.1",
+  "authors": [
+    "mashmetv <mashme@mashme.tv>"
+  ],
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "seed"
+  ],
+  "main": "hello-component.html",
+  
+  "license": "MIT",
+  "ignore": [
+    "/.*",
+    "/demo/",
+    "/test/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#0.8-preview",
+    "webcomponentsjs": "Polymer/webcomponentsjs#master"
+  },
+  "devDependencies": {
+  }
+}
